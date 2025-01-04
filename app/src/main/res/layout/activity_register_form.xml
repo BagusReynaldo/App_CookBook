@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".RegisterForm">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/register"
+            android:textColor="#EB6A04"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/textView"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="-130dp"
+            android:contentDescription="@string/arrow"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/logo_img" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="70dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/edittext_border1"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:text="@string/input_email"
+            android:textColor="#807E7E"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/edittext_border1"
+            android:drawableStart="@drawable/baseline_vpn_key_24"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:text="@string/input_pass"
+            android:textColor="#807E7E"
+            android:drawablePadding="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/txt_passwordAgain"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/edittext_border1"
+            android:drawableStart="@drawable/baseline_vpn_key_24"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:text="@string/input_pass"
+            android:textColor="#807E7E"
+            android:drawablePadding="10dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Register"
+            style="@style/CustomButtonStyle3"/>
+    </LinearLayout>
+
+
+</LinearLayout>

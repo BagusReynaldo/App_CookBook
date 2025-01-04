@@ -1,0 +1,211 @@
+<resources>
+    <string name="app_name">App CookBook</string>
+
+    <string name="login">LOGIN</string>
+    <string name="arrow">arrow back</string>
+    <string name="input_email">Masukan Email</string>
+    <string name="input_pass">Masukan Password</string>
+
+    <string name="register">REGISTER</string>
+
+
+    // List Kue Kering
+    <string name="premis_kastangel">315 gr Tepung Komachi - 60 gr maizena - 250 gr butter
+            margarin - 2 kuning telur - 2,5 sdm gula halus - 250 gr
+            keju parut - 1 sachet susu bubuk putih</string>
+    <string name="premis_purtisalju">150 gr butter - 100 gr margarin - 100 gr gula halus - 200
+        gr kacang mete - 250 gr tepung terigu - 150 gr gula halus
+        - 50 gr gula donat</string>
+    <string name="premis_oatCookies">50 gr gula palem - 2 scht gula diet  - 90 gr margarin -
+        2 kuning telur - 75 gr tepung mocaf - 100 gr oatmeal
+        instant - 50 gr kacang al - 10 gr chia seed…</string>
+    <string name="premis_meg">110 gr Butter - 85 gr Gula Halus - 170 gr Tepung Protein
+        sedang - 5 gr susu bubuk - 80 gr Meg cheddar</string>
+
+    // kastangel
+    <string name="bahan_kastangel">
+        • 315 gr Tepung Komachi\n
+        • 60 gr Maizena\n
+        • 250 gr Butter/Margarin\n
+        • 2 Kuning Telur\n
+        • 2,5 sdm Gula Halus\n
+        • 250 gr Keju Parut\n
+        • 1 Sachet Susu Bubuk Putih
+    </string>
+    <string name="langkah_kastangel">
+        1. Campur tepung komachi dan maizena, aduk rata, lalu sisihkan.\n\n
+        2. Campur butter/mentega dengan gula halus, kuning telur, dan susu. Mixer atau kocok dengan whisk hingga tercampur rata. Kemudian, masukkan keju yang telah diparut halus, aduk kembali hingga merata.\n\n
+        3. Masukkan campuran tepung komachi dan maizena tadi, lalu aduk hingga rata.\n\n
+        4. Cetak adonan sesuai selera. Olesi bagian atasnya dengan campuran kuning telur dan sedikit kental manis, lalu panggang pada suhu 150°C selama 35 menit.
+    </string>
+
+    // purti salju
+    <string name="bahan_purtisalju">
+        • 150 gr butter
+        • 100 gr margarin
+        • 100 gr gula halus
+        • 200 gr kacang mete
+        • 250 gr tepung terigu
+        • 150 gr gula halus
+        • 50 gr gula donat
+    </string>
+    <string name="langkah_putrisalju">
+        1. Mixer gula halus yang sudah diayak + butter + margarin asal rata saja kurang lebih 5 menit.\n\n
+        2. Masukkan kacang mete, aduk pakai wisk/spatula.\n\n
+        3. Masukkan terigu yang sudah diayak. Aduk rata, bulatkan tutup plastik wrap lalu simpan di kulkas minimal 30 menit./n/n
+        4. Bentuk putri salju sesuai selera. Lalu susun di loyang yang sudah dialasi baking paper. Panaskan oven, lalu panggang pada suhu 125-150 derajat selama 30-35 menit\n\n
+        5. Setelah matang langsung gulingkan ke gula halus dilanjutkan ke gula donat\n\n
+        6. Susun kue kering putri salju pada loyang, lakukan sampai kue kering habis, lalu simpan pada toples
+    </string>
+
+    // oat cookies
+    <string name="bahan_oat">
+        • 50 gr Gula Palem\n
+        • 2 Sachet Gula Diet\n
+        • 90 gr Margarin\n
+        • 2 Kuning Telur\n
+        • 75 gr Tepung Mocaf\n
+        • 100 gr Oatmeal Instant\n
+        • 50 gr Kacang Almond\n
+        • 10 gr Chia Seed\n
+        • 25 gr Chocochip\n
+        • 1/2 sdt Vanili Bubuk
+    </string>
+    <string name="langkah_oat">
+    1. Siapkan bahan-bahan yang akan digunakan. Campur jadi satu tepung mocaf, oatmeal, dan vanila bubuk. Kemudian aduk rata.\n\n
+    2. Masukkan ke dalam wadah gula palem, gula diet, dan margarin. Aduk rata menggunakan whisk hingga lembut. Masukkan kuning telur, aduk hingga rata.\n\n
+    3. Masukkan campuran tepung secara bertahap, aduk hingga rata. Masukkan kacang almond, chia seed, dan chocochip, lalu aduk kembali hingga merata.\n\n
+    4. Ambil 1/2 sdm adonan, cetak sesuai bentuk yang diinginkan. Taruh di atas loyang yang sudah dialasi baking paper, lalu oven hingga matang.
+</string>
+
+    // meg cheese
+    <string name="bahan_meg_cheddar">
+    • 110 gr Butter\n
+    • 85 gr Gula Halus\n
+    • 170 gr Tepung Protein Sedang\n
+    • 5 gr Susu Bubuk\n
+    • 80 gr Meg Cheddar
+</string>
+    <string name="langkah_meg">
+        1. Kocok bahan A dengan kecepatan sedang hingga lembut.\n\n
+        2. Masukkan bahan B aduk hingga rata.\n\n
+        3. Gilas adonan hingga ketebalan 1 cm Lalu potong-potong sesuai selera.\n\n
+        4. Panggang dengan suhu 140 selama 45 menit.
+    </string>
+
+
+
+
+
+
+    // list masakan indonesia
+    <string name="premis_gado">
+        250 gr kacang tanah, siap goreng - 1/4 kg minyak goreng
+- 2 bks santan kental (65ml) - 5 buah cabe merah keriting
+- 5 buah cabe rawit merah
+- 5 siung bawang putih...
+    </string>
+    <string name="premis_semursapi">
+        150 gr butter - 100 gr margarin - 100 gr gula halus - 200 gr kacang mete - 250 gr tepung terigu - 150 gr gula halus - 50 gr gula donat
+    </string>
+
+    // gado-gado
+    <string name="bahan_gado">
+    • 250 gr kacang tanah, siap goreng\n
+    • 1/4 kg minyak goreng\n
+    • 2 bks santan kental (65ml)\n
+    • 5 buah cabe merah keriting\n
+    • 5 buah cabe rawit merah\n
+    • 5 siung bawang putih\n
+    • 2 keping gula merah\n
+    • 2 keping asam Jawa, seduh air panas\n
+    • 1,5 sdt garam (sesuai selera)\n
+    • 5 sdm kecap manis (sesuai selera)
+</string>
+
+    <string name="langkah_gado">
+    1. Goreng cabe merah, cabe rawit, dan bawang putih sampai layu, angkat lalu haluskan bersama kacang tanah yang sudah digoreng.\n\n
+    2. Masak dalam panci: masukkan air, santan, gula, garam, dan air asam. Aduk terus agar tidak gosong di dasar panci. Sesuaikan kekentalan dengan selera masing-masing, lalu tunggu sampai meletup-letup.\n\n
+    3. Tambahkan kecap manis, aduk kembali, dan koreksi rasa. Jika sudah pas, angkat. Saus kacang untuk bumbu gado-gado siap disajikan.
+</string>
+
+
+    // semur sapi
+    <string name="bahan_semur">
+    • 1 kg daging sapi, cuci bersih dengan air mengalir\n
+    • 2 ruas lengkuas, iris lalu geprek\n
+    • 2 batang serai, geprek lalu buat simpul\n
+    • 3 lembar daun salam\n
+    • Secukupnya garam dan gula pasir\n
+    • 1 glondong sedang gula jawa\n
+    • Secukupnya kecap manis\n
+    • Sedikit masako sapi\n
+    • 600 ml air\n
+    • 3 siung bawang merah dan bawang putih\n
+    • 1 sdm peres ketumbar\n
+    • 1/2 sdt merica
+</string>
+
+    <string name="langkah_semur">
+        1. Buang bagian putih pada daging (lemak) dan iris daging (tipis sedang) berlawan arah dengan tekstur daging. Ini tips saya agar daging ga alot.\n\n
+        2. leg semua bumbu. Lebih enak uleg manual aja kalo saya sih. Bikin rasa lebih mantab. Hehe
+    </string>
+
+
+    // pastry
+    <string name="premis_cromboloni">
+        Danish pastry
+- 1 kuning telur + 1 sdm susu cair - 200 cc - susu cair UHT - 20 gram SKM
+- 40 gram chocolate coumpound
+- 15 gram maizena
+- chocolate coumpound -
+sprincle
+    </string>
+    <string name="premis_puff">
+        1 lembar kulit pastry
+- 100 gram selai nanas
+- 1 butir kuning telur untuk olesan
+    </string>
+
+    // cromboloni
+    <string name="bahan_cromboloni">
+        • Danish pastry
+• 1 kuning telur + 1 sdm susu cair\n
+• 200 cc susu cair UHT\n
+• 20 gram SKM\n
+• 40 gram chocolate coumpound\n
+• 15 gram maizena\n
+• chocolate coumpound a\n
+        • sprincle
+    </string>
+    <string name="langkah_cromboloni">
+        1. Siapkan semua bahan, Danish pastry me sheets kalau ada merk Edo : simpan di chiller mau dipakai keluarkan di suhu ruang. Taburi permukaan working place dengan tepung terigu potong potong memanjang. Gulung kulit pastry untuk 1 ring cutter 3 - 4 dengan ukuran 3 cm.
+\n\n
+2. Masukkan diatas loyang dan ring cutter yang sudah diolesi margarin, tutup biarkan mengembang (me : 60 menit). Siapkan olesan kutel + 1 sdm susu cair.
+\n\n
+3. Sesaat sebelum dipanggang oles dengan kutel + 1 sdm susu cair. Panaskan oven terlebih dahulu panggang dengan suhu 200 ° C api bawah tutup dengan loyang yang dioles margarin dan beri beban selama 20 menit me : 30 menit tergantung oven masing masing.\n\n
+        4. Angkat loyang dan beban panggang kembali hingga golden brown (me : 30 menit). Angkat keluarkan dari ring cutter biarkan dingin di rolling rack.\n\n
+5. Untuk membuat Vla campur susu cair, SKM dan maizena dalam panci aduk rata. Masak menggunakan api kecil cenderung sedang sampai meletup letup. Masukkan chocolate coumpound aduk hingga meleleh.\n\n
+6. Setelah meleleh matikan api. Pindahkan Vla ke wadah lain. Tutup permukaannya dengan wrap sampai digunakan masukkan ke dalam piping bag.\n\n
+7. Lubangi sisi samping cromboloni dengan sumpit, semprotkan isian cromboloni, hiasi dengan DCC cair dan taburi dengan sprinkle. Sajikan selagi hangat.
+    </string>
+
+    // puff
+    <string name="bahan_puff">
+        • 1 lembar kulit pastry
+• 100 gram selai nanas
+• 1 butir kuning telur untuk olesan
+    </string>
+
+    <string name="langkah_puff">
+        1. Siapkan bahan-bahannya.\n\n
+2. Potong kulit pastry menjadi 9 bagian. Isi dengan selai nanas.\n\n
+
+3. Lipat bentuk segitiga, rekatkan ujungnya dengan garpu. Olesi dengan kuning telur.\n\n
+
+4. Panggang dalam oven dengan api sedang selama 40 menit atau sampai permukaannya coklat, angkat.\n\n
+5. Siap disajikan.
+    </string>
+
+
+</resources>
