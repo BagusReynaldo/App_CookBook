@@ -207,5 +207,189 @@ sprincle
 5. Siap disajikan.
     </string>
 
+    // Bolu
+    <string name="premis_pisang">
+        4 butir telur ayam
+- 300 gr pisang ambon, lumatkan dgn garpu
+- 150 gr gula pasir
+- 180 gr terigu protein sedang
+- 1 sdm susu bubuk
+- 1 sdt SP
+    </string>
+    <string name="premis_pepaya">
+        500 gr pepaya matang, berat tanpa kulit
+- 500 gr tepung terigu
+- 250 gr gula pasir
+- 250 gr margarin
+- 4 btr telur
+- 1 sdt vanili bubuk
+- 1 sdt baking powder
+- 1 sdt soda kue
+    </string>
+
+    // bolu pisang
+    <string name="bahan_pisang">
+    • 4 butir telur ayam\n
+    • 300 gr pisang ambon, lumatkan dengan garpu\n
+    • 150 gr gula pasir\n
+    • 180 gr tepung terigu protein sedang\n
+    • 1 sdm susu bubuk\n
+    • 1 sdt SP\n
+    • 1 sdt baking powder\n
+    • 1 sdt vanili bubuk\n
+    • 130 gr margarin\n
+    • Keju parut\n
+    • Choco chip
+</string>
+
+    <string name="langkah_pisang">
+    1. Siapkan bahan-bahan. Lelehkan margarin dengan api kecil, lalu sisihkan.\n\n
+    2. Campurkan telur, gula pasir, dan SP. Kocok dengan mixer kecepatan tinggi hingga mengembang dan kental berjejak.\n\n
+    3. Turunkan kecepatan, lalu masukkan tepung terigu dan pisang yang sudah dihaluskan. Mixer hingga tercampur rata.\n\n
+    4. Masukkan margarin cair. Matikan mixer, lalu aduk dengan spatula menggunakan metode aduk balik sampai merata. Pastikan tidak ada margarin yang mengendap di dasar wadah. Panaskan oven dengan suhu 170°C.\n\n    5. Tuang adonan ke dalam loyang yang sudah diolesi margarin. Taburi dengan topping sesuai selera, lalu panggang selama sekitar 30 menit dengan api atas bawah.\n
+    6. Lakukan tes tusuk dengan tusuk sate untuk menguji kematangan. Jika sudah tidak ada adonan yang lengket, berarti bolu matang. Angkat dan tunggu hingga hangat sebelum dikeluarkan dari loyang.
+</string>
+
+
+    // bolu pepaya
+    <string name="bahan_pepaya">
+    • 500 gr pepaya matang, berat tanpa kulit\n
+    • 500 gr tepung terigu\n
+    • 250 gr gula pasir\n
+    • 250 gr margarin\n
+    • 4 butir telur\n
+    • 1 sdt vanili bubuk\n
+    • 1 sdt baking powder\n
+    • 1 sdt soda kue
+</string>
+
+    <string name="langkah_pepaya">
+    1. Bersihkan pepaya dari kulit dan bijinya. Blender pepaya tanpa air hingga halus.\n\n
+    2. Campurkan gula pasir dan telur. Aduk hingga gula larut.\n\n
+    3. Masukkan pepaya halus ke dalam campuran telur dan gula, lalu aduk rata.\n\n
+    4. Masukkan tepung terigu, aduk hingga tercampur rata.\n\n
+    5. Tuang margarin cair ke dalam adonan, lalu aduk dengan spatula hingga merata.\n\n
+    6. Tambahkan vanili bubuk, baking powder, dan soda kue. Aduk rata.\n\n
+    7. Panaskan oven selama 15 menit. Olesi loyang dengan margarin, lalu tuang adonan hingga hampir penuh. Hentakkan loyang untuk mengeluarkan udara.\n\n
+    8. Panggang adonan pada suhu 150°C (atau sesuai oven masing-masing) hingga matang dan kecokelatan.\n\n
+    9. Angkat loyang dan dinginkan. Setelah dingin, keluarkan kue dari loyang, potong-potong sesuai selera, dan sajikan.
+</string>
+
+    // es krim
+    <string name="premis_vanila">
+        100 ml susu kental manis putih - 450 ml susu uht putih - 8 sdm gula pasir - 3 sdm tepung maizena larutkan dengan 200 ml air - 1 sdm sp - Secukupnya biskuit goriorio atau oreo
+    </string>
+    <string name="premis_buahnaga">
+        200 gr buah naga merah
+- 3 sdm gula pasir
+- 225 susu cair Uht putih
+- 3 sdm yoghurt
+- 1 sdt SP - 2 sdm tepung meizena
+    </string>
+
+    // eskrim vanila
+    <string name="bahan_vanila">
+    • 100 ml susu kental manis putih\n
+    • 450 ml susu UHT putih\n
+    • 8 sdm gula pasir\n
+    • 3 sdm tepung maizena, larutkan dengan 200 ml air\n
+    • 1 sdm SP\n
+    • Secukupnya biskuit Goriorio atau Oreo
+</string>
+    <string name="langkah_vanila">
+    1. Siapkan bahan-bahan.\n\n
+    2. Aduk rata susu kental manis, gula pasir, dan susu cair full cream. Masak dengan api kecil sambil terus diaduk hingga mendidih.\n\n
+    3. Setelah mendidih, masukkan larutan tepung maizena. Masak kembali hingga adonan mengental dan meletup-letup, lalu angkat.\n\n
+    4. Tuangkan adonan ke dalam wadah dan dinginkan. Setelah dingin, bekukan di freezer.\n\n
+    5. Lelehkan SP dengan cara ditim. Dinginkan hingga SP kembali ke bentuk semula.\n\n
+    6. Kerok es krim yang sudah beku, tambahkan SP, lalu mixer dengan kecepatan tinggi hingga mengembang tiga kali lipat.\n\n
+    7. Tuang es krim ke dalam wadah. Tambahkan potongan cookies, aduk hingga tercampur rata. Tutup wadah, lalu bekukan kembali di freezer.
+</string>
+
+    // eskrim buah naga
+    <string name="bahan_buahnaga">
+    • 200 gr buah naga merah\n
+    • 3 sdm gula pasir\n
+    • 225 ml susu cair UHT putih\n
+    • 3 sdm yoghurt\n
+    • 1 sdt SP\n
+    • 2 sdm tepung maizena
+</string>
+    <string name="langkah_buahnaga">
+    1. Kupas buah naga, potong-potong, lalu masukkan ke dalam blender. Tambahkan susu cair, gula pasir, dan yoghurt. Blender hingga menjadi jus.\n\n
+    2. Saring jus buah naga dan masukkan ke dalam panci.\n\n
+    3. Cairkan 1 sdt SP hingga cair, kemudian tambahkan SP ke dalam adonan es krim. Mixer hingga mengembang. Saya mixer sekitar 30 menit, jika ingin mengembang lebih lama, bisa diperpanjang waktu mixing-nya.\n\n
+    4. Masukkan adonan ke dalam wadah atau cup, lalu bekukan semalaman hingga menjadi es krim.\n\n
+    5. Sajikan.
+</string>
+
+
+    // Masakan kuah
+    <string name="premis_wonton">
+        250 gram fillet dada ayam
+- 1 sdm kecap asin
+- 1 sdm minyak wijen
+- 1/2 sdt garam halus
+- 1/4 sdt lada bubuk
+1/2 bks kulit pangsit bulat...
+    </string>
+    <string name="premis_kol">
+        500 gr kembang kol
+- 5 siung bawang merah
+- 15 gr Fiber Creme
+- Garam dan bumbu kaldu secukupnya
+- 200 gr air matang
+    </string>
+
+    // Sup wonton
+    <string name="bahan_wonton">
+    • 250 gram fillet dada ayam\n
+    • 1 sdm kecap asin\n
+    • 1 sdm minyak wijen\n
+    • 1/2 sdt garam halus\n
+    • 1/4 sdt lada bubuk\n
+    • 1/2 bks kulit pangsit bulat\n
+    • 1500 ml air\n
+    • 1 sdt bawang putih bubuk\n
+    • 1 sdt garam halus\n
+    • 1/2 sdt kaldu bubuk ayam\n
+    • 1/4 sdt lada bubuk\n
+    • 1 batang daun bawang bagian hijau, iris halus
+</string>
+    <string name="langkah_wonton">
+    1. Cincang daging ayam, bisa menggunakan chopper agar lebih halus.\n\n
+    2. Aduk rata daging ayam cincang, kecap asin, garam halus, lada bubuk, dan minyak wijen.\n\n
+    3. Ambil selembar kulit pangsit bulat, olesi pinggirnya dengan air, lalu taruh 1 sdt adonan ayam di tengahnya. Bungkus hingga membentuk wonton.\n\n
+    4. Didihkan air, tambahkan garam halus, kaldu bubuk ayam, bawang putih bubuk, dan lada bubuk. Masukkan wonton, masak dengan api kecil hingga matang. Tes rasa, lalu angkat. Jangan terlalu lama merebus agar kulit pangsit tidak pecah.\n\n    5. Sajikan hangat dengan irisan daun bawang dan saus sambal.
+</string>
+
+
+    // Sup kol
+    <string name="bahan_kol">
+    • 500 gr kembang kol\n
+    • 5 siung bawang merah\n
+    • 15 gr Fiber Creme\n
+    • Garam dan bumbu kaldu secukupnya\n
+    • 200 gr air matang\n
+    • Secukupnya minyak\n
+    • Haluskan:\n
+    • 5 siung bawang putih\n
+    • 4 biji cabe merah\n
+    • 2 butir kemiri\n
+    • 1 buah tomat
+</string>
+    <string name="langkah_kol">
+    1. Potong kembang kol dari tangkainya, cuci bersih, lalu tiriskan.\n\n
+    2. Iris bawang merah. Haluskan bumbu (bawang putih, cabe merah, kemiri, tomat) menggunakan blender.\n\n
+    3. Goreng irisan bawang merah hingga layu, kemudian masukkan bumbu halus. Masak hingga matang.\n\n
+    4. Tambahkan kembang kol, aduk rata.\n\n
+    5. Tambahkan air, garam, dan bumbu kaldu. Biarkan bumbu meresap dan masak hingga kuah agak susut.\n\n
+    6. Masukkan Fiber Creme, tes rasa, aduk sebentar, lalu matikan kompor.\n\n
+    7. Hidangkan.
+</string>
+
+
+
+
 
 </resources>
