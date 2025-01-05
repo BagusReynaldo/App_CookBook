@@ -1,14 +1,16 @@
 package com.projectbp3.appcookbook;
 
+import androidx.fragment.app.Fragment;
+
 public class recyclerview_list {
     private String title;
     private int image;
-    private Class<?> destinationActivity;
+    private Fragment destinationFragment;
 
-    public recyclerview_list(String title, int image, Class<?> destinationActivity) {
+    public recyclerview_list(String title, int image, Fragment destinationFragment) {
         this.title = title;
         this.image = image;
-        this.destinationActivity = destinationActivity;
+        this.destinationFragment = destinationFragment;
     }
 
     public String getTitle() {
@@ -29,11 +31,11 @@ public class recyclerview_list {
         this.image = image;
     }
 
-    public Class<?> getDestinationActivity() {
-        return destinationActivity;
+    public Fragment getDestinationFragment() {
+        return destinationFragment;
     }
 
     public void setDestinationActivity(Class<?> destinationActivity) {
-        this.destinationActivity = destinationActivity;
+        this.destinationFragment = destinationFragment;
     }
 }

@@ -9,7 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -36,14 +38,20 @@ public class recyclerview_adapter extends RecyclerView.Adapter<recyclerview_adap
         holder.imageView.setImageResource(recyclerview_list.get(position).getImage());
         holder.textView.setText(recyclerview_list.get(position).getTitle());
 
-        Class<?> destination = recyclerview_list.get(position).getDestinationActivity();
+        Fragment destinationFragment = recyclerview_list.get(position).getDestinationFragment();
 
         holder.cardView.setOnClickListener(e -> {
-            Intent intent = new Intent(context, destination); // Tujuan diambil dari daftar
-            context.startActivity(intent);
+            if (context instanceof AppCompatActivity) {
+                AppCompatActivity activity = (AppCompatActivity) context;
+                activity.getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, destinationFragment) // R.id.frame_layout adalah container fragment
+                        .addToBackStack(null) // Menambahkan ke BackStack untuk navigasi "kembali"
+                        .commit();
+            }
         });
-
     }
+
 
     @Override
     public int getItemCount() {

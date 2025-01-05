@@ -28,12 +28,12 @@ public class Homepage extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
         recyclerview_list = new ArrayList<>();
-        recyclerview_list.add(new recyclerview_list("Kue Kering", R.drawable.kue_kering, list_kue.class));
-        recyclerview_list.add(new recyclerview_list("Masakan Indonesia", R.drawable.masakan_indo, list_masakan_indo.class));
-        recyclerview_list.add(new recyclerview_list("Pastry", R.drawable.pastry, list_pastry.class));
-        recyclerview_list.add(new recyclerview_list("Bolu", R.drawable.bolu, list_bolu.class));
-        recyclerview_list.add(new recyclerview_list("Es Krim", R.drawable.eskrim , list_eskrim.class));
-        recyclerview_list.add(new recyclerview_list("Masakan Kuah", R.drawable.masakan_kuah, list_masakan_kuah.class));
+        recyclerview_list.add(new recyclerview_list("Kue Kering", R.drawable.kue_kering, new fragment_kue()));
+        //recyclerview_list.add(new recyclerview_list("Masakan Indonesia", R.drawable.masakan_indo, list_masakan_indo.class));
+        //recyclerview_list.add(new recyclerview_list("Pastry", R.drawable.pastry, list_pastry.class));
+        //recyclerview_list.add(new recyclerview_list("Bolu", R.drawable.bolu, list_bolu.class));
+        //recyclerview_list.add(new recyclerview_list("Es Krim", R.drawable.eskrim , list_eskrim.class));
+        //recyclerview_list.add(new recyclerview_list("Masakan Kuah", R.drawable.masakan_kuah, list_masakan_kuah.class));
 
 
         recyclerview_adapter adapter = new recyclerview_adapter(recyclerview_list, this);

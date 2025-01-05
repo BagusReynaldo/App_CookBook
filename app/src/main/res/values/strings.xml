@@ -94,10 +94,6 @@
     </string>
 
 
-
-
-
-
     // list masakan indonesia
     <string name="premis_gado">
         250 gr kacang tanah, siap goreng - 1/4 kg minyak goreng
@@ -387,9 +383,12 @@ sprincle
     6. Masukkan Fiber Creme, tes rasa, aduk sebentar, lalu matikan kompor.\n\n
     7. Hidangkan.
 </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
-
+    <string name="versi_app">2024.12.03 (31077). versi global\n\n
+        \t\t\t\tID Pengguna : 000001\n\n
+        \t\t\t\t\t\t@cookbook Inc.</string>
 
 
 </resources>
