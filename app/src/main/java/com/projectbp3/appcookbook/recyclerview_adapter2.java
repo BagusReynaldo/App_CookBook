@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class recyclerview_adapter2 extends RecyclerView.Adapter<recyclerview_adapter2.ViewHolder> {
 
+    public static final ArrayList<String> bookmarkedItems = new ArrayList<>();
+
     private ArrayList<recyclerview_list2> recyclerview_list2;
     private Context context;
 
@@ -36,11 +38,28 @@ public class recyclerview_adapter2 extends RecyclerView.Adapter<recyclerview_ada
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         recyclerview_list2 item = recyclerview_list2.get(position);
 
-        holder.imageView.setImageResource(recyclerview_list2.get(position).getImage());
-        holder.title.setText(recyclerview_list2.get(position).getTitle());
-        holder.premis.setText(recyclerview_list2.get(position).getPremis());
-        holder.timer.setText(recyclerview_list2.get(position).getTimer());
+        holder.imageView.setImageResource(item.getImage());
+        holder.title.setText(item.getTitle());
+        holder.premis.setText(item.getPremis());
+        holder.timer.setText(item.getTimer());
 
+        // Perbarui ikon bookmark sesuai status saat ini
+        updateBookmarkIcon(holder, item);
+
+        // Atur aksi klik bookmark
+        holder.bookmark.setOnClickListener(v -> {
+            if (bookmarkedItems.contains(item.getUniqueId())) {
+                // Jika sudah di-bookmark, hapus
+                bookmarkedItems.remove(item.getUniqueId());
+            } else {
+                // Jika belum di-bookmark, tambahkan
+                bookmarkedItems.add(item.getUniqueId());
+            }
+            // Perbarui ikon bookmark setelah status diubah
+            updateBookmarkIcon(holder, item);
+        });
+
+        // Aksi klik item untuk membuka detail resep
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, detail_resep.class);
             intent.putExtra("image2", item.getImage2());
@@ -52,6 +71,8 @@ public class recyclerview_adapter2 extends RecyclerView.Adapter<recyclerview_ada
         });
     }
 
+
+
     @Override
     public int getItemCount() {
         return recyclerview_list2.size();
@@ -59,9 +80,8 @@ public class recyclerview_adapter2 extends RecyclerView.Adapter<recyclerview_ada
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView premis;
-        TextView title;
-        TextView timer;
+        TextView premis, title, timer;
+        ImageView bookmark;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,7 +89,17 @@ public class recyclerview_adapter2 extends RecyclerView.Adapter<recyclerview_ada
             premis = itemView.findViewById(R.id.premis);
             title = itemView.findViewById(R.id.title);
             timer = itemView.findViewById(R.id.timer);
+            bookmark = itemView.findViewById(R.id.bookmark);
         }
     }
+
+    private void updateBookmarkIcon(ViewHolder holder, recyclerview_list2 item) {
+        boolean isBookmarked = bookmarkedItems.contains(item.getUniqueId());
+        holder.bookmark.setImageResource(
+                isBookmarked ? R.drawable.baseline_bookmark_24_white
+                        : R.drawable.baseline_bookmark_border_24_white
+        );
+    }
+
 
 }

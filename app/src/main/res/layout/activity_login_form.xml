@@ -70,8 +70,9 @@
             android:ems="10"
             android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:text="@string/input_email"
-            android:textColor="#807E7E"
+            android:hint="@string/input_email"
+            android:textColorHint="#807E7E"
+            android:textColor="@color/black"
             android:drawableStart="@drawable/baseline_email_24"
             android:drawablePadding="10dp"
             android:textSize="14sp" />
@@ -87,8 +88,9 @@
             android:ems="10"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:text="@string/input_pass"
-            android:textColor="#807E7E"
+            android:hint="@string/input_pass"
+            android:textColorHint="#807E7E"
+            android:textColor="@color/black"
             android:drawablePadding="10dp"
             android:textSize="14sp" />
     </LinearLayout>

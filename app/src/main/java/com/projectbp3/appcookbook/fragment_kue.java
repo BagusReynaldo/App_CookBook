@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -19,6 +21,9 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class fragment_kue extends Fragment {
+
+    AutoCompleteTextView ac;
+    public String[] dataList = {"Kue Kering", "Masakan Indonesia", "Pastry", "Bolu", "Es Krim", "Masakan Kuah"};
 
     ArrayList<recyclerview_list2> recyclerview_list2;
     RecyclerView recyclerView;
@@ -72,6 +77,48 @@ public class fragment_kue extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView_kue);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
+
+        // Inisialisasi AutoCompleteTextView
+        ac = (AutoCompleteTextView) view.findViewById(R.id.txt_search);
+        ac.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, dataList));
+
+        // Tambahkan listener untuk item yang dipilih
+        ac.setOnItemClickListener((parent, view1, position, id) -> {
+            String selectedItem = parent.getItemAtPosition(position).toString();
+
+            if (selectedItem.equals("Kue Kering")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_kue())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Masakan Indonesia")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_indo())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Pastry")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_pastry())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Bolu")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_bolu())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Es Krim")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_eskrim())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Masakan Kuah")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_kuah())
+                        .addToBackStack(null)
+                        .commit();
+            }
+
+        });
 
         recyclerview_list2 = new ArrayList<>();
         recyclerview_list2.add(new recyclerview_list2(

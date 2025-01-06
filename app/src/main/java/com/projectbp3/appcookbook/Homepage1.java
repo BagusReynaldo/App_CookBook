@@ -1,5 +1,7 @@
 package com.projectbp3.appcookbook;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;

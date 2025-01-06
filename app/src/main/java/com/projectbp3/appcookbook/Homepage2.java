@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,9 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class Homepage2 extends Fragment {
+
+    AutoCompleteTextView ac;
+    public String[] dataList = {"Kue Kering", "Masakan Indonesia", "Pastry", "Bolu", "Es Krim", "Masakan Kuah"};
 
     ArrayList<recyclerview_list> recyclerview_list;
     RecyclerView recyclerView;
@@ -69,13 +74,53 @@ public class Homepage2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_homepage2, container, false);
 
         // Inisialisasi RecyclerView
-        recyclerView = view.findViewById(R.id.recyclerView); // Gunakan view.findViewById
+        recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-
-        // Gunakan requireContext() untuk konteks
         recyclerView.setLayoutManager(new GridLayoutManager(requireContext(), 2));
 
-        // Inisialisasi data untuk RecyclerView
+        // Inisialisasi AutoCompleteTextView
+        ac = (AutoCompleteTextView) view.findViewById(R.id.txt_search);
+        ac.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, dataList));
+
+        // Tambahkan listener untuk item yang dipilih
+        ac.setOnItemClickListener((parent, view1, position, id) -> {
+            String selectedItem = parent.getItemAtPosition(position).toString();
+
+            if (selectedItem.equals("Kue Kering")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_kue())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Masakan Indonesia")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_indo())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Pastry")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_pastry())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Bolu")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_bolu())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Es Krim")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_eskrim())
+                        .addToBackStack(null)
+                        .commit();
+            } else if (selectedItem.equals("Masakan Kuah")) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.frame_layout, new fragment_kuah())
+                        .addToBackStack(null)
+                        .commit();
+            }
+
+        });
+
+        // Inisialisasi data RecyclerView
         recyclerview_list = new ArrayList<>();
         recyclerview_list.add(new recyclerview_list("Kue Kering", R.drawable.kue_kering, new fragment_kue()));
         recyclerview_list.add(new recyclerview_list("Masakan Indonesia", R.drawable.masakan_indo, new fragment_indo()));
@@ -84,7 +129,7 @@ public class Homepage2 extends Fragment {
         recyclerview_list.add(new recyclerview_list("Es Krim", R.drawable.eskrim, new fragment_eskrim()));
         recyclerview_list.add(new recyclerview_list("Masakan Kuah", R.drawable.masakan_kuah, new fragment_kuah()));
 
-        // Atur adapter untuk RecyclerView
+        // Atur adapter RecyclerView
         recyclerview_adapter adapter = new recyclerview_adapter(recyclerview_list, requireContext());
         recyclerView.setAdapter(adapter);
 

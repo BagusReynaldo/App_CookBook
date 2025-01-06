@@ -1,6 +1,8 @@
 package com.projectbp3.appcookbook;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,6 +66,14 @@ public class Profil extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
 
+        // Ambil email dari SharedPreferences
+        SharedPreferences sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE);
+        String email = sharedPreferences.getString("email", "Tidak ada email");
+
+        // Tampilkan email di TextView dengan ID akun
+        TextView akunTextView = view.findViewById(R.id.akun);
+        akunTextView.setText(email); // Set teks email ke TextView
+
         // Temukan ImageView dalam view hasil inflate
         ImageView cek_versi = view.findViewById(R.id.cek_version);
 
@@ -70,6 +81,14 @@ public class Profil extends Fragment {
         cek_versi.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), versiApp.class);
             startActivity(intent);
+        });
+
+
+        ImageView backArrow = view.findViewById(R.id.backArrow);
+        backArrow.setOnClickListener(v -> {
+            if (getActivity() != null) {
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
         });
 
         return view;

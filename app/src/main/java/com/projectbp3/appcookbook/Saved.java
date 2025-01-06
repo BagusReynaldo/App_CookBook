@@ -32,26 +32,7 @@ public class Saved extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
 
-        // Data untuk RecyclerView
         recyclerview_list2 = new ArrayList<>();
-        recyclerview_list2.add(new recyclerview_list2(
-                R.drawable.wonton,
-                getString(R.string.premis_wonton),
-                "Sup Wonton Daging Ayam",
-                "60 Menit",
-                R.drawable.wonton2,
-                getString(R.string.bahan_wonton),
-                getString(R.string.langkah_wonton)
-        ));
-        recyclerview_list2.add(new recyclerview_list2(
-                R.drawable.kol,
-                getString(R.string.premis_kol),
-                "Kembang Kol Kuah Fiber Cream",
-                "50 Menit",
-                R.drawable.kol2,
-                getString(R.string.bahan_kol),
-                getString(R.string.langkah_kol)
-        ));
         recyclerview_list2.add(new recyclerview_list2(
                 R.drawable.kastangel,
                 getString(R.string.premis_kastangel),
@@ -88,9 +69,109 @@ public class Saved extends Fragment {
                 getString(R.string.bahan_meg_cheddar),
                 getString(R.string.langkah_meg)
         ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.vanila,
+                getString(R.string.premis_vanila),
+                "Eskrim Vanilla Cookies",
+                "60 Menit",
+                R.drawable.vanila2,
+                getString(R.string.bahan_vanila),
+                getString(R.string.langkah_vanila)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.buah_naga,
+                getString(R.string.premis_buahnaga),
+                "Es Krim Buah Naga",
+                "30 Menit",
+                R.drawable.buah_naga2,
+                getString(R.string.bahan_buahnaga),
+                getString(R.string.langkah_buahnaga)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.bolu_pisang,
+                getString(R.string.premis_pisang),
+                "Bolu Pisang Panggang",
+                "90 Menit",
+                R.drawable.bolu_pisang2,
+                getString(R.string.bahan_pisang),
+                getString(R.string.langkah_pisang)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.bolu_pepaya,
+                getString(R.string.premis_pepaya),
+                "Bolu Pepaya",
+                "120 Menit",
+                R.drawable.bolu_pepaya2,
+                getString(R.string.bahan_pepaya),
+                getString(R.string.langkah_pepaya)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.gado_gado,
+                getString(R.string.premis_gado),
+                "Bumbu Kacang (Gado-gado)",
+                "30 Menit",
+                R.drawable.gado_gado2,
+                getString(R.string.bahan_gado),
+                getString(R.string.langkah_gado)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.semur_sapi,
+                getString(R.string.premis_semursapi),
+                "Semur Daging Sapi",
+                "75 Menit",
+                R.drawable.semur_sapi2,
+                getString(R.string.bahan_semur),
+                getString(R.string.langkah_semur)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.wonton,
+                getString(R.string.premis_wonton),
+                "Sup Wonton Daging Ayam",
+                "60 Menit",
+                R.drawable.wonton2,
+                getString(R.string.bahan_wonton),
+                getString(R.string.langkah_wonton)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.kol,
+                getString(R.string.premis_kol),
+                "Kembang Kol Kuah fiber Cream",
+                "50 Menit",
+                R.drawable.kol2,
+                getString(R.string.bahan_kol),
+                getString(R.string.langkah_kol)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.cromboloni,
+                getString(R.string.premis_cromboloni),
+                "Cromboloni",
+                "90 Menit",
+                R.drawable.cromboloni2,
+                getString(R.string.bahan_cromboloni),
+                getString(R.string.langkah_cromboloni)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.puff,
+                getString(R.string.premis_puff),
+                "Puff Pastry Selai Nanas",
+                "60 Menit",
+                R.drawable.puff2,
+                getString(R.string.bahan_puff),
+                getString(R.string.langkah_puff)
+        ));
 
-        // Set Adapter ke RecyclerView
-        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, getContext());
+        // Filter item yang di-bookmark
+        ArrayList<recyclerview_list2> savedItems = new ArrayList<>();
+        for (String bookmarkedId : recyclerview_adapter2.bookmarkedItems) {
+            for (recyclerview_list2 item : recyclerview_list2) {
+                if (item.getUniqueId().equals(bookmarkedId)) { // Bandingkan ID unik
+                    savedItems.add(item);
+                }
+            }
+        }
+
+
+        recyclerview_adapter2 adapter = new recyclerview_adapter2(savedItems, getContext());
         recyclerView.setAdapter(adapter);
 
         return view;

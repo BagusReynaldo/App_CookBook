@@ -74,4 +74,9 @@ public class recyclerview_list2 {
     public void setLangkah(String langkah) {
         this.langkah = langkah;
     }
+
+    public String getUniqueId() {
+        return title; // atau kombinasi unik, misalnya title + premis
+    }
+
 }
