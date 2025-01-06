@@ -386,9 +386,7 @@ sprincle
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="versi_app">2024.12.03 (31077). versi global\n\n
-        \t\t\t\tID Pengguna : 000001\n\n
-        \t\t\t\t\t\t@cookbook Inc.</string>
+    <string name="versi_app">cookbook Inc.</string>
 
 
 </resources>
