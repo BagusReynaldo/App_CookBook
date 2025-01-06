@@ -49,7 +49,7 @@ public class list_pastry extends AppCompatActivity {
         ));
 
 
-        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, this);
+        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, this, false);
         recyclerView.setAdapter(adapter);
 
         ImageView backArrow = findViewById(R.id.backArrow);

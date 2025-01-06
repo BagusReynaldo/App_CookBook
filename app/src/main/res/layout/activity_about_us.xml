@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AboutUs">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="About Us"
+            android:textColor="#EB6A04"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/textView"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="-135dp"
+            android:contentDescription="@string/arrow"
+            android:src="@drawable/baseline_arrow_back_24" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/logo_app"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/logo_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:text="Aplikasi ini dibuat untuk menyelesaikan Tugas Akhir\n
+Bahasa Pemrograman 3 dengan dosen pengampu : \n
+Dede Husen, M.Kom"
+        android:textColor="#565656"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Anggota Kelompok"
+        android:layout_gravity="center"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="13sp"
+        android:text="Bagus Reynaldo [20220810104]"
+        android:layout_gravity="center"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:text="Iqbal Azhar [20220810122]"
+        android:layout_gravity="center"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:text="Reynaldy Deffry Pramudya [20220810126]"
+        android:layout_gravity="center"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TINFC-2022-04"
+        android:layout_gravity="center"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

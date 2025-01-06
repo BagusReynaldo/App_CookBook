@@ -141,7 +141,7 @@ public class fragment_eskrim extends Fragment {
                 getString(R.string.langkah_buahnaga)
         ));
 
-        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, getContext());
+        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, getContext(), false);
         recyclerView.setAdapter(adapter);
 
         ImageView backArrow = view.findViewById(R.id.backArrow);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App CookBook</string>
+    <string name="app_name">CookBook</string>
 
     <string name="login">LOGIN</string>
     <string name="arrow">arrow back</string>

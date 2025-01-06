@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ public class Homepage2 extends Fragment {
     public String[] dataList = {"Kue Kering", "Masakan Indonesia", "Pastry", "Bolu", "Es Krim", "Masakan Kuah"};
 
     ArrayList<recyclerview_list> recyclerview_list;
+    ArrayList<recyclerview_list2> recyclerview_list2;
     RecyclerView recyclerView;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -132,6 +134,77 @@ public class Homepage2 extends Fragment {
         // Atur adapter RecyclerView
         recyclerview_adapter adapter = new recyclerview_adapter(recyclerview_list, requireContext());
         recyclerView.setAdapter(adapter);
+
+        // Inisialisasi RecyclerView Horizontal
+        RecyclerView horizontalRecyclerView = view.findViewById(R.id.horizontalRecyclerView);
+        horizontalRecyclerView.setHasFixedSize(true);
+
+        // Atur LayoutManager untuk horizontal scrolling
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        horizontalRecyclerView.setLayoutManager(layoutManager);
+
+        // Data untuk RecyclerView Horizontal
+        recyclerview_list2 = new ArrayList<>();
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.kastangel,
+                getString(R.string.premis_kastangel),
+                "Kastangel tepung komachi",
+                "50 Menit",
+                R.drawable.kastangel2,
+                getString(R.string.bahan_kastangel),
+                getString(R.string.langkah_kastangel)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.bolu_pisang,
+                getString(R.string.premis_pisang),
+                "Bolu Pisang Panggang",
+                "90 Menit",
+                R.drawable.bolu_pisang2,
+                getString(R.string.bahan_pisang),
+                getString(R.string.langkah_pisang)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.vanila,
+                getString(R.string.premis_vanila),
+                "Eskrim Vanilla Cookies",
+                "60 Menit",
+                R.drawable.vanila2,
+                getString(R.string.bahan_vanila),
+                getString(R.string.langkah_vanila)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.gado_gado,
+                getString(R.string.premis_gado),
+                "Bumbu Kacang (Gado-gado)",
+                "30 Menit",
+                R.drawable.gado_gado2,
+                getString(R.string.bahan_gado),
+                getString(R.string.langkah_gado)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.wonton,
+                getString(R.string.premis_wonton),
+                "Sup Wonton Daging Ayam",
+                "60 Menit",
+                R.drawable.wonton2,
+                getString(R.string.bahan_wonton),
+                getString(R.string.langkah_wonton)
+        ));
+        recyclerview_list2.add(new recyclerview_list2(
+                R.drawable.cromboloni,
+                getString(R.string.premis_cromboloni),
+                "Cromboloni",
+                "90 Menit",
+                R.drawable.cromboloni2,
+                getString(R.string.bahan_cromboloni),
+                getString(R.string.langkah_cromboloni)
+        ));
+
+        // Set adapter untuk RecyclerView Horizontal
+        recyclerview_adapter2 horizontalAdapter = new recyclerview_adapter2(recyclerview_list2, getContext(), true);
+        horizontalRecyclerView.setAdapter(horizontalAdapter);
+
+
 
         return view;
     }

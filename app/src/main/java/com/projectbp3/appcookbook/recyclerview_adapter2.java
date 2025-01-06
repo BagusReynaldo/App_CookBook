@@ -17,49 +17,76 @@ import java.util.ArrayList;
 
 public class recyclerview_adapter2 extends RecyclerView.Adapter<recyclerview_adapter2.ViewHolder> {
 
-    public static final ArrayList<String> bookmarkedItems = new ArrayList<>();
+    private boolean usePopularLayout;
 
+    private static final int TYPE_LIST = 0;
+    private static final int TYPE_POPULAR = 1;
+
+    public static final ArrayList<String> bookmarkedItems = new ArrayList<>();
     private ArrayList<recyclerview_list2> recyclerview_list2;
     private Context context;
 
-    public recyclerview_adapter2(ArrayList<recyclerview_list2> recyclerview_list2, Context context) {
+    public recyclerview_adapter2(ArrayList<recyclerview_list2> recyclerview_list2, Context context, boolean usePopularLayout) {
         this.recyclerview_list2 = recyclerview_list2;
         this.context = context;
+        this.usePopularLayout = usePopularLayout;
     }
+
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycleview_list, parent, false);
+        View view;
+        if (viewType == TYPE_POPULAR) {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycleview_populer, parent, false);
+        } else {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycleview_list, parent, false);
+        }
         return new ViewHolder(view); // FIX: Use correct ViewHolder
     }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (usePopularLayout) {
+            return TYPE_POPULAR; // Layout populer
+        } else {
+            return TYPE_LIST; // Layout biasa
+        }
+    }
+
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         recyclerview_list2 item = recyclerview_list2.get(position);
 
-        holder.imageView.setImageResource(item.getImage());
-        holder.title.setText(item.getTitle());
-        holder.premis.setText(item.getPremis());
-        holder.timer.setText(item.getTimer());
+        if (getItemViewType(position) == TYPE_POPULAR) {
+            // Bind untuk layout populer
+            holder.imageView.setImageResource(item.getImage());
+            holder.title.setText(item.getTitle());
+            holder.timer.setText(item.getTimer());
+        } else {
+            // Bind untuk layout list biasa
+            holder.imageView.setImageResource(item.getImage());
+            holder.title.setText(item.getTitle());
+            holder.premis.setText(item.getPremis());
+            holder.timer.setText(item.getTimer());
+        }
 
-        // Perbarui ikon bookmark sesuai status saat ini
+        // Update bookmark
         updateBookmarkIcon(holder, item);
 
-        // Atur aksi klik bookmark
+        // Bookmark click listener
         holder.bookmark.setOnClickListener(v -> {
             if (bookmarkedItems.contains(item.getUniqueId())) {
-                // Jika sudah di-bookmark, hapus
                 bookmarkedItems.remove(item.getUniqueId());
             } else {
-                // Jika belum di-bookmark, tambahkan
                 bookmarkedItems.add(item.getUniqueId());
             }
-            // Perbarui ikon bookmark setelah status diubah
             updateBookmarkIcon(holder, item);
         });
 
-        // Aksi klik item untuk membuka detail resep
+        // Detail klik
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, detail_resep.class);
             intent.putExtra("image2", item.getImage2());
@@ -70,6 +97,7 @@ public class recyclerview_adapter2 extends RecyclerView.Adapter<recyclerview_ada
             context.startActivity(intent);
         });
     }
+
 
 
 

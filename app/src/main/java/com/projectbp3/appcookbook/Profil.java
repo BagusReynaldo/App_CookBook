@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -77,11 +78,18 @@ public class Profil extends Fragment {
         // Temukan ImageView dalam view hasil inflate
         ImageView cek_versi = view.findViewById(R.id.cek_version);
 
-        // Set klik listener
-        cek_versi.setOnClickListener(v -> {
+        RelativeLayout about_us = view.findViewById(R.id.about_us);
+        about_us.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), AboutUs.class);
+            startActivity(intent);
+        });
+
+        RelativeLayout cek_versiApp = view.findViewById(R.id.cek_versiApp);
+        cek_versiApp.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), versiApp.class);
             startActivity(intent);
         });
+
 
 
         ImageView backArrow = view.findViewById(R.id.backArrow);

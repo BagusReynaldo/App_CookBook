@@ -67,7 +67,7 @@ public class list_kue extends AppCompatActivity {
                 getString(R.string.langkah_meg)
         ));
 
-        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, this);
+        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, this, false);
         recyclerView.setAdapter(adapter);
 
         ImageView backArrow = findViewById(R.id.backArrow);

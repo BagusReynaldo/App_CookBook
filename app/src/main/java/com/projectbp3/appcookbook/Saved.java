@@ -171,7 +171,7 @@ public class Saved extends Fragment {
         }
 
 
-        recyclerview_adapter2 adapter = new recyclerview_adapter2(savedItems, getContext());
+        recyclerview_adapter2 adapter = new recyclerview_adapter2(savedItems, getContext(), false);
         recyclerView.setAdapter(adapter);
 
         return view;

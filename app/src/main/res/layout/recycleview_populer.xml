@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/listView"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     app:cardElevation="10dp"
@@ -10,7 +10,7 @@
     android:background="@color/white">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:background="@color/white">
 
@@ -20,21 +20,21 @@
             android:layout_height="142dp"
             android:background="@color/white"
             app:srcCompat="@drawable/kastangel"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentStart="true"/>
 
         <ImageView
             android:id="@+id/bookmark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:padding="10dp"
             android:src="@drawable/baseline_bookmark_border_24_white" />
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="15dp"
             android:layout_marginTop="13dp"
             android:text="Kastangel tepung komachi"
@@ -44,23 +44,25 @@
 
         <TextView
             android:id="@+id/premis"
-            android:layout_width="250dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="55dp"
             android:text="@string/premis_kastangel"
-            android:textSize="10sp"
+            android:textSize="8sp"
             android:textStyle="italic"
+            android:layout_marginEnd="10dp"
             android:textColor="#979797" />
 
         <TextView
             android:id="@+id/timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="115dp"
             android:text="50 Menit"
             android:textColor="#BDBCBC"
             android:textSize="11sp"

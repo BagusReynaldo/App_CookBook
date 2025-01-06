@@ -158,7 +158,7 @@ public class fragment_kue extends Fragment {
                 getString(R.string.langkah_meg)
         ));
 
-        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, getContext());
+        recyclerview_adapter2 adapter = new recyclerview_adapter2(recyclerview_list2, getContext(), false);
         recyclerView.setAdapter(adapter);
 
         ImageView backArrow = view.findViewById(R.id.backArrow);

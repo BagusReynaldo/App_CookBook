@@ -1,5 +1,6 @@
 package com.projectbp3.appcookbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,6 +26,24 @@ public class detail_resep extends AppCompatActivity {
         backArrow.setOnClickListener(v -> {
             finish();
         });
+
+        ImageView share = findViewById(R.id.share);
+        share.setOnClickListener(v -> {
+            // Buat teks yang akan dibagikan
+            String shareText = "Resep: " + title.getText().toString() + "\n\n"
+                    + "Waktu: " + timer.getText().toString() + "\n\n"
+                    + "Bahan-bahan:\n" + bahan.getText().toString() + "\n\n"
+                    + "Langkah-langkah:\n" + langkah.getText().toString();
+
+            // Buat Intent untuk share
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+
+            // Mulai proses share
+            startActivity(Intent.createChooser(shareIntent, "Bagikan Resep"));
+        });
+
 
         // Inisialisasi view
         imageView = findViewById(R.id.imageView);
