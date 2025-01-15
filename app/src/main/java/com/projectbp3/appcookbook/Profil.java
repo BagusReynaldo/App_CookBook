@@ -76,8 +76,6 @@ public class Profil extends Fragment {
         akunTextView.setText(email); // Set teks email ke TextView
 
         // Temukan ImageView dalam view hasil inflate
-        ImageView cek_versi = view.findViewById(R.id.cek_version);
-
         RelativeLayout about_us = view.findViewById(R.id.about_us);
         about_us.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), AboutUs.class);
